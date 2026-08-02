@@ -1,0 +1,126 @@
+# Python bytecode and caches
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Compiled extensions
+*.so
+*.dylib
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+
+# Packaging and build artifacts
+build/
+dist/
+downloads/
+develop-eggs/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Test, coverage, and benchmark output
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+.tox/
+.nox/
+.cache/
+.benchmarks/
+test-results/
+junit.xml
+
+# Type checkers, linters, and formatters
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# Python tooling
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+__pypackages__/
+.pdm-python
+.pdm-build/
+.uv-cache/
+
+# FastAPI / ASGI runtime files
+*.log
+logs/
+*.pid
+*.pid.lock
+gunicorn.pid
+
+# Local databases and service state
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+celerybeat-schedule
+celerybeat.pid
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# Documentation builds
+docs/_build/
+site/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Operating-system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Temporary files and local scratch space
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
