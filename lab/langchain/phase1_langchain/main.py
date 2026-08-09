@@ -6,15 +6,15 @@ from collections.abc import Sequence
 
 from langchain_core.documents import Document
 
-from src.config import CHAT_MODEL, EMBEDDING_MODEL
-from src.phase1_langchain.agent import run_study_agent
-from src.phase1_langchain.knowledge import build_retriever
-from src.phase1_langchain.models import (
+from lab.langchain.src.config import CHAT_MODEL, EMBEDDING_MODEL
+from lab.langchain.phase1_langchain.agent import run_study_agent
+from lab.langchain.phase1_langchain.knowledge import build_retriever
+from lab.langchain.phase1_langchain.models import (
     InterviewAnswer,
     create_chat_model,
     create_embedding_model,
 )
-from src.phase1_langchain.rag import (
+from lab.langchain.phase1_langchain.rag import (
     answer_knowledge_question,
     build_rag_chain,
 )

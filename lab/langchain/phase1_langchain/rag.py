@@ -6,7 +6,7 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_core.runnables import Runnable
 from langchain_core.prompts import ChatPromptTemplate
 
-from src.phase1_langchain.models import InterviewAnswer
+from lab.langchain.phase1_langchain.models import InterviewAnswer
 
 
 RAG_PROMPT = ChatPromptTemplate.from_messages(

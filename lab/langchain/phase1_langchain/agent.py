@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain.chat_models import BaseChatModel
 from langchain.messages import AIMessage, ToolMessage
 
-from src.phase1_langchain.tools import create_study_plan
+from lab.langchain.phase1_langchain.tools import create_study_plan
 
 
 AGENT_SYSTEM_PROMPT = """You route requests for an interview preparation assistant.

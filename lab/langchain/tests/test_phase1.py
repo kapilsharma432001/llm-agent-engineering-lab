@@ -2,10 +2,10 @@ from langchain_core.documents import Document
 from langchain_core.embeddings import DeterministicFakeEmbedding
 from langchain_core.runnables import RunnableLambda
 
-from src.phase1_langchain.knowledge import build_vector_store
-from src.phase1_langchain.models import InterviewAnswer
-from src.phase1_langchain.rag import answer_knowledge_question
-from src.phase1_langchain.tools import create_study_plan
+from lab.langchain.phase1_langchain.knowledge import build_vector_store
+from lab.langchain.phase1_langchain.models import InterviewAnswer
+from lab.langchain.phase1_langchain.rag import answer_knowledge_question
+from lab.langchain.phase1_langchain.tools import create_study_plan
 
 
 def test_study_plan_distributes_remainder() -> None:

@@ -10,7 +10,7 @@ from langchain_core.messages import BaseMessage
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
-from src.config import CHAT_MODEL, EMBEDDING_MODEL
+from lab.langchain.src.config import CHAT_MODEL, EMBEDDING_MODEL
 
 
 class InterviewAnswer(BaseModel):
