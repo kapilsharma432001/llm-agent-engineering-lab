@@ -8,7 +8,7 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from src.config import (
+from lab.langchain.src.config import (
     CHUNK_OVERLAP,
     CHUNK_SIZE,
     KNOWLEDGE_DIRECTORY,
