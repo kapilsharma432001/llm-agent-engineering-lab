@@ -16,4 +16,21 @@
 6. **Context Builder** -  combines recent conversation, relevant long-term memories, RAG chunks, and graph evidence while deduplicating and respecting the model's token budget.
     - If context is too large then summarise past conversations, remove low-rank evidence, or compress retrieved chunks.
 7. Send the final context to the LLM, then perform grounding and citation checks before returning the response.
-8. After the response, update the short-term memory (Redis state) and asynchronously extract any durable semantic/episodic memories worth storing in Pinecone (long-term memory)
+8. After the response, update the short-term memory (Redis state) and asynchronously extract any durable semantic/episodic memories worth storing in Pinecone (long-term memory).
+
+#### How are we validating input and output tokens?
+- Suppose model context window is 50k tokens.
+- Then we should not allow the user to consume all 50k tokens, because that window must also contain:-
+    - System prompt
+    - user prompt
+    - Conversation history
+    - RAG Context (knowledge)
+    - long-term memories
+    - model output
+
+- So you define your own budget, something like this:-
+    ![defining budget](image-1.png)
+- And within even that 40k you are restricting the current user message futher:-
+    `MAX_USER_INPUT = 10k tokens`
+
+
