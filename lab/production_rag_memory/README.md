@@ -1,5 +1,5 @@
 ## Multi-Tenant Conversational RAG Architecture with Agent Memory
-![RAG System - Architecture Diagram](image.png)
+![RAG System - Architecture Diagram](image-2.png)
 -> One arrow from 'Query Understanding' to knowledge RAG is missing here.
 
 - It is a production-grade, multi-tenant RAG & Memory Architecture
