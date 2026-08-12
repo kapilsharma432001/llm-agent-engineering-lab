@@ -1,5 +1,6 @@
 ## Multi-Tenant Conversational RAG Architecture with Agent Memory
 ![RAG System - Architecture Diagram](image.png)
+-> One arrow from 'Query Understanding' to knowledge RAG is missing here.
 
 - It is a production-grade, multi-tenant RAG & Memory Architecture
 - We have covered a lot of things in it: tenant isolation, RAG, token management, memory, knowledge graphs, grounding and asynchronous memory persistence.
@@ -34,3 +35,26 @@
     `MAX_USER_INPUT = 10k tokens`
 
 
+#### How do we actually count tokens?
+- Use the tokenizer curresponding to your model/provider.
+
+Conceptually:-
+
+token_count = tokenizer.count(user_input)
+if token_count > MAX_USER_INPUT:
+    raise InputTooLargeError()
+
+- For OpenAI models, `tiktoken` or the provider's token counting facilities are commonly used.
+- So, if allowed user input = 10k, but user entered 60k. You reject ot before calling the LLM.
+- Or for files/documents, instead of putting all 60k into chat:-
+
+60k document -> ingestion pipeline -> chunk -> embed -> Pinecone
+
+#### What actually happens in 'Query Understanding' part?
+- We are generally sending the query to LLM first for understanding/routing and only after that create embeddings for retrieval.
+
+Step A: Query Understanding / planner
+Input to LLM:-
+
+`
+Recent Conversation: 
